@@ -2,19 +2,27 @@
 
 /*
 |--------------------------------------------------------------------------
-| Application Routes
+| La table de routage
 |--------------------------------------------------------------------------
 |
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
+| On peut définir une route en passant une fonction anonyme ou
+| une chaine de caractère pointant vers une fonction à executer
+| à l'intérieur d'un contrôleur
 |
 */
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('home');
 });
-Route::get('users', function() {
-        return 'Coucou';
-    });
+Route::get('/login', function()
+{
+    return Redirect::to('/');
+});
+Route::get('/caccauette/inscription', 'CaccauetteController@inscriptionIndex');
+/*
+Route::get('/api/articles/latest', 'ArticleController@getLatest');
+Route::get('/api/articles/top', 'ArticleController@getTop');
+Route::get('/api/article/:id', 'ArticleController@getArticle');
+Route::post('/api/article/new', 'ArticleController@createArticle');
+Route::post('/api/article/:id', 'ArticleController@updateArticle');*/

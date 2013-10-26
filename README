@@ -1,0 +1,46 @@
+Site de B3M
+
+Les gens peuvent écrire des articles pour parler d'une bière
+
+Le site permet de tester de nouvelles technos:
+côté client :
+angularjs
+
+côté serveur :
+laravel
+
+Modèle de données :
+
+utilisateurs:
+login //login utc
+pseudo //pseudo sur le site
+email
+pass //pour les extérieurs
+created_at
+admin //est-ce que l'utilisateur peut gérer le site ?
+
+articles:
+titre
+auteur_id
+contenu
+created_at
+accepted_at
+accepted_by
+modified_at
+deleted_at
+
+votes:
+utilisateur_id
+post_id
+score
+created_at
+modified_at
+deleted_at
+
+commentaires:
+utilisateur_id
+article_id
+contenu
+created_at
+modified_at
+deleted_at
